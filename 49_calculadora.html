@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+
+    <style>
+
+        html, body{
+            height: 100%;
+        }
+
+        h2{
+            text-align: center;
+        }
+
+        /*Base do Grid*/
+        .gridContainer{
+            margin: 10% auto;
+            width: 15%;
+            height: 40%;
+            background-color: black;
+            padding: 20px;
+            border-radius: 15px;
+            
+        }
+
+        .gridButton{
+        width: 100%;
+        height: 100%;
+        background-color: brown;
+        }
+        /*Base do Grid*/
+
+        .gridContainer{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            grid-gap: 10px;
+        }
+
+        /*Formatação da Grid-Area*/
+
+        #resultScreen{
+            grid-column: 1 / 5;
+            text-align: right;
+            font-size: 1.5em;
+            padding: 10px;
+            background-image: linear-gradient(#c5c5c5, #e0e0e0);
+        }
+
+        #buttonAC{
+            grid-row: 2;
+            grid-column: 1;
+        }
+
+        #buttonPercentage{
+            grid-row: 2;
+            grid-column: 2;
+        }
+
+        #buttonMult{
+            grid-row: 2;
+            grid-column: 3; 
+        }
+
+        #buttonSplit{
+            grid-row: 2;
+            grid-column: 4;
+        }
+
+        #buttonSeven{
+            grid-row: 3;
+            grid-column: 1;
+        }
+
+        #buttonEight{
+            grid-row: 3;
+            grid-column: 2;
+        }
+
+        #buttonNine{
+            grid-row: 3;
+            grid-column: 3;
+        }
+
+        #buttonEqual{
+            grid-row: 3;
+            grid-column: 4;
+        }
+
+        #buttonFour{
+            grid-row: 4;
+            grid-column: 1;
+        }
+
+        #buttonFive{
+            grid-row: 4;
+            grid-column: 2;
+        }
+
+        #buttonSix{
+            grid-row: 4;
+            grid-column: 3;
+        }
+
+        #buttonMinus{
+            grid-row: 4;
+            grid-column: 4;
+        }
+
+        #buttonOne{
+            grid-row: 5;
+            grid-column: 1;
+        }
+
+        #buttonTwo{
+            grid-row: 5;
+            grid-column: 2;
+        }
+
+        #buttonThree{
+            grid-row: 5;
+            grid-column: 3;
+        }
+
+        #buttonAdd{
+            grid-row: 5 / 7;
+            grid-column: 4;
+            background-color: maroon;
+        }
+
+        #buttonZero{
+            grid-row: 6;
+            grid-column: 1 / 3;
+            background-color: maroon;
+        }
+
+        #buttonComma{
+            grid-row-start: 6 / 7;
+            grid-column: 3;
+        }
+
+        /*Base da Grid*/
+        /*grid-template-areas:
+            "resultScreen resultScreen resultScreen resultScreen"
+            "buttonAC buttonPercentage buttonMult buttonSplit"
+            "buttonSeven buttonEight buttonNine buttonEqual"
+            "buttonFour buttonFive buttonSix buttonMinus"
+            "buttonOne buttonTwo buttonThree buttonAdd"
+            "buttonZero buttonZero buttonComma buttonAdd";*/
+
+        /*Formatação da Grid-Area*/
+        /*#resultScreen{
+            grid-area: resultScreen;
+        }
+        
+        #buttonAC{
+            grid-area: buttonAC;
+        }
+        
+        #buttonPercentage{
+            grid-area: buttonPercentage;
+        }
+
+        #buttonMult{
+            grid-area: buttonMult;
+        }
+
+        #buttonSplit{
+            grid-area: buttonSplit;
+        }
+        
+        #buttonSevem{
+            grid-area: buttonSeven;
+        }
+
+        #buttonZero{
+            grid-area: buttonZero;
+        }*/
+
+    </style>
+</head>
+<body>
+    <h2>Calculadora!</h2>
+    <hr>
+
+    <div class="gridContainer">
+    <!--Números-->
+    <button type="button" class="gridButton" id="resultScreen">0</button>
+    <button type="button" class="gridButton" id="buttonZero">0</button>
+    <button type="button" class="gridButton" id="buttonOne">1</button>
+    <button type="button" class="gridButton" id="buttonTwo">2</button>
+    <button type="button" class="gridButton" id="buttonThree">3</button>
+    <button type="button" class="gridButton" id="buttonFour">4</button>
+    <button type="button" class="gridButton" id="buttonFive">5</button>
+    <button type="button" class="gridButton" id="buttonSix">6</button>
+    <button type="button" class="gridButton" id="buttonSeven">7</button>
+    <button type="button" class="gridButton" id="buttonEight">8</button>
+    <button type="button" class="gridButton" id="buttonNine">9</button>
+    <!--Números-->
+
+    <!--Utilidades-->
+    <button type="button" class="gridButton" id="buttonComma">,</button>
+    <button type="button" class="gridButton" id="buttonEqual">=</button>
+    <button type="button" class="gridButton" id="buttonAC">AC</button>
+    <!--Números-->
+
+        <!--Operadores-->
+    <button type="button" class="gridButton" id="buttonPercentage">%</button>
+    <button type="button" class="gridButton" id="buttonMult">X</button>
+    <button type="button" class="gridButton" id="buttonSplit">/</button>
+    <button type="button" class="gridButton" id="buttonAdd">+</button>
+    <button type="button" class="gridButton" id="buttonMinus">-</button>
+        <!--Operadores-->
+    </div>
+</body>
+</html>
